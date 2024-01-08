@@ -18,7 +18,7 @@ export default function useSession() {
     if (!store.authUser) {
       fetchUser();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  //  eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return store.authUser;

@@ -2,9 +2,9 @@ import Header from "@/components/Header";
 import RegisterForm from "./register-form";
 
 export default async function RegisterPage() {
-  // await new Promise((resolve) => {
-  //   setTimeout(resolve, 1000);
-  // });
+ await new Promise((resolve) => {
+     setTimeout(resolve, 1000);
+   });
   return (
     <>
       <Header />

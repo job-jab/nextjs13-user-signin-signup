@@ -67,28 +67,32 @@ export default function LoginForm() {
     <FormProvider {...methods}>
       <form
         onSubmit={handleSubmit(onSubmitHandler)}
-        className="max-w-md w-full mx-auto overflow-hidden shadow-lg bg-ct-dark-200 rounded-2xl p-8 space-y-5"
+        className="max-w-md w-full mx-auto overflow-hidden shadow-xl shadow-indigo-500/40 rounded-2xl p-8 space-y-4"
       >
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+          <img
+            class="mx-auto h-40 w-auto"
+            src="https://i.ibb.co/cwBpK4g/screenshot20231231-removebg-preview.png"
+            alt="่jobjab_logo"
+            width="123"
+            height="168"
+          ></img>
+          <h2 class="mt-10 text-center text-2xl font-bold leading-9 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+            Sign in to your account
+          </h2>
+        </div>
+
         <FormInput label="Email" name="email" type="email" />
         <FormInput label="Password" name="password" type="password" />
 
         <div className="text-right">
-          <Link href="#" className="">
+          <Link href="#" className="text-rose-600">
             Forgot Password?
           </Link>
         </div>
-        <LoadingButton
-          loading={store.requestLoading}
-          textColor="text-ct-blue-600"
-        >
+        <LoadingButton loading={store.requestLoading} textColor="white">
           Login
         </LoadingButton>
-        <span className="block">
-          Need an account?{" "}
-          <Link href="/register" className="text-ct-blue-600">
-            Sign Up Here
-          </Link>
-        </span>
       </form>
     </FormProvider>
   );

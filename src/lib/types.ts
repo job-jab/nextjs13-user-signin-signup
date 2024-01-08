@@ -1,7 +1,8 @@
 export interface FilteredUser {
   id: string;
-  name: string;
   email: string;
+  name: string;
+  position: string;
   role: string;
   verified: boolean;
   createdAt: string;
